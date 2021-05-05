@@ -10,7 +10,7 @@ public class Test2 {
 
     //дэзэ: ввести 2 числа, разделить одно на другое. обработать исключение, которое возникает при попытке
     // разделить на ноль, чтобы выводился не только стектрейс, но и комментарий от вас .
-   // @Test
+    @Test
     public void main() {
         System.out.println("enter the number");
         //Scanner scanner = new Scanner(System.in);
