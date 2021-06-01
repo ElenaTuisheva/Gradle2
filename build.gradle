@@ -4,13 +4,15 @@ plugins {
 
 group 'org.example'
 version '1.0-SNAPSHOT'
+compileTestJava.options.encoding = 'UTF-8';
+//compileJava.options.encoding = 'UTF-8';
 
 repositories {
     mavenCentral()
 }
-test {
-    useTestNG()
-}
+//test {
+//    useTestNG()
+//}
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
