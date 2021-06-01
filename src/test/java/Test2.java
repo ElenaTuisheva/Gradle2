@@ -31,28 +31,21 @@ public class Test2 {
         String text = text();
         //String month = text.replaceAll("\\sмарта\\s(?=\\d{4})", ".05.");
         //System.out.println(month);
-        Map<Integer, String> months = new HashMap<>();
-        months.put(1, "января");
-        months.put(2, "февраля");
-        months.put(3, "марта");
-        months.put(4, "апреля");
-        months.put(5, "мая");
-        months.put(6, "июня");
-        months.put(7, "июля");
-        months.put(8, "августа");
-        months.put(9, "сентября");
-        months.put(10, "октября");
-        months.put(11, "ноября");
-        months.put(12, "декабря");
-        for (Integer key : months.keySet()) {
-            if (key == 10)
+        Map<String, String> months = new HashMap<>();
+        months.put("01", "января");
+        months.put("02", "февраля");
+        months.put("03", "марта");
+        months.put("04", "апреля");
+        months.put("05", "мая");
+        months.put("06", "июня");
+        months.put("07", "июля");
+        months.put("08", "августа");
+        months.put("09", "сентября");
+        months.put("10", "октября");
+        months.put("11", "ноября");
+        months.put("12", "декабря");
+        for (String key : months.keySet()) {
                 text = text.replaceAll("\\s" + months.get(key) + "\\s(?=\\d{4})", "\\." + key + "\\.");
-            else if (key == 11)
-                text = text.replaceAll("\\s" + months.get(key) + "\\s(?=\\d{4})", "\\." + key + "\\.");
-            else if (key == 12)
-                text = text.replaceAll("\\s" + months.get(key) + "\\s(?=\\d{4})", "\\." + key + "\\.");
-            else
-                text = text.replaceAll("\\s" + months.get(key) + "\\s(?=\\d{4})", "\\.0" + key + "\\.");
         }
         System.out.println(text);
 
